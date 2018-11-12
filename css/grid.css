@@ -1,0 +1,66 @@
+/*--- Container ---*/
+.grid-container {
+    width : 100%;
+    max-width : 1200px; 
+}
+
+/*--- Row ---*/
+/* clearfix hack to keep everything inside the row */ 
+.row:before, 
+.row:after {
+    content:"";
+    display: table;
+    clear:both;
+}
+
+/*--- Column ---*/
+/* Give columns a min-height so that they dont stack with
+each other when they are empty*/
+[class*='col-'] {
+    float: left;
+    min-height: 1px; 
+    /* six columns 100/6 */
+    width: 16.66%; 
+    /* column gutter */
+    padding: 12px;
+    background-color: rgb(255, 213, 184);
+}
+
+.col-1{
+    width: 16.66%; 
+}
+.col-2{
+    width: 33.33%; 
+}
+.col-3{
+    width: 50%; 
+}
+.col-4{
+    width: 66.664%;
+}
+.col-5{
+    width: 83.33%;
+}
+.col-6{
+    width: 100%;
+}
+
+/* setting border box on all elements inside the grid */
+.grid-container *{
+    box-sizing: border-box; 
+}
+
+/* setting border on all elements inside the grid*/
+.outline, .outline * {
+    outline: 1px solid rgb(255, 143, 39); 
+}
+
+/* some extra column content styling */
+[class*='col-'] > p {
+    background-color: rgb(255, 167, 85); 
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+    color: white; 
+}
+
